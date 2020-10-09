@@ -20,10 +20,11 @@ dbconnect.row_factory = sqlite3.Row;
 
 cursor = dbconnect.cursor();
 
+
 #execute simple select statement
 
 cursor.execute('SELECT * FROM sensors WHERE zone = "kitchen"');
-
+#cursor.execute("INSERT INTO sensors VALUES(?,?,?)", (7, "motion", "garage"));
 #print data
 
 for row in cursor:
